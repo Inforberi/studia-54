@@ -41,8 +41,10 @@ const MainScreen = ({
       </div>
       <div
         className={cn(
-          "flex w-full flex-col items-center gap-5 pr-[60px] pt-5",
-          "sm:mb-14 sm:grid sm:grid-cols-2 sm:gap-20 sm:pt-48",
+          "flex w-full flex-col items-center gap-5 pr-5 pt-32",
+          "sm:gap-100 sm:mb-14 sm:grid sm:grid-cols-2",
+          "lg:pr-10 lg:pt-48",
+          "xl:pr-[60px]",
         )}
       >
         <Image
@@ -51,10 +53,10 @@ const MainScreen = ({
           src={`${BASE_URL}${architectureImageSrc}`}
           quality={100}
           alt={houseImageAlt || ""}
-          className="min-w-[308px]"
+          className={cn("min-w-[308px]", "sm:min-w-[380px]")}
         />
         <div className={cn("mb-14 px-5 text-white", "sm:text-black")}>
-          <p className={cn("mb-7 max-w-[580px]")}>{description}</p>
+          <p className={cn("text-text mb-7 max-w-[580px]")}>{description}</p>
           <button
             className={cn(
               "rounded-full border border-white px-12 py-5 transition-colors duration-300 hover:border-hover hover:bg-hover hover:text-white active:border-active active:bg-active",
@@ -68,7 +70,7 @@ const MainScreen = ({
       <div
         className={cn(
           "absolute bottom-0 left-0 -z-10 h-80 w-screen bg-black",
-          "block sm:h-28",
+          "block sm:h-20",
         )}
       ></div>
     </section>

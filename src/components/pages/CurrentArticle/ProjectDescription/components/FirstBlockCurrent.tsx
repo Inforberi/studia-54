@@ -11,15 +11,15 @@ const FirstBlockCurrent = () => {
         <Image src="/main-screen/testnews.jpg" fill alt="что-то" />
       </div>
       <div className="flex flex-col gap-7 border-b-[1px] border-divider text-white">
-        <h2 className="text-[32px]">Project description</h2>
-        <p className="mb-10">
+        <h2 className="text-h2">Project description</h2>
+        <p className="text-text mb-10">
           This involves considering local traditions, historical influences, and
           social norms. For example, the use of specific materials, colors, and
           architectural styles can reflect the cultural heritage of a region.
           Moreover, culturally sensitive design can foster a sense of community
           and belonging among occupants.
         </p>
-        <p>
+        <p className="text-text">
           At the heart of Studia 54s philosophy lies a profound respect for the
           owners desires. We strive to blend their unique preferences with our
           distinctive design code. This approach allows us to achieve harmony

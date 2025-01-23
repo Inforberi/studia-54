@@ -16,6 +16,10 @@ export default {
       screens: {
         "3xl": "1920px",
       },
+      fontSize: {
+        text: "clamp(0.875rem, 0.85rem + 0.125vw, 1rem)",
+        h2: "clamp(1.25rem, 1.1rem + 0.75vw, 2rem)",
+      },
     },
   },
   plugins: [],

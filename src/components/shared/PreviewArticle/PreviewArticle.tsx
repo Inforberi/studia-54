@@ -36,8 +36,8 @@ const PreviewArticle = ({
         <Image src={`${BASE_URL}${src}`} alt={title} fill />
       </div>
       <div className="relative z-10">
-        <h3 className={cn("mb-5 text-[32px]")}>{title}</h3>
-        <p>{text}</p>
+        <h3 className={cn("text-h2 mb-5")}>{title}</h3>
+        <p className="text-text">{text}</p>
       </div>
     </div>
   );

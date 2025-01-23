@@ -26,7 +26,7 @@ const MainScreenArticle = ({ src, title, text }: MainScreenArticleProps) => {
         <h1 className="max-w-[890px] text-5xl font-bold leading-relaxed">
           {title}
         </h1>
-        <p className="max-w-lg">{text}</p>
+        <p className="text-text max-w-lg">{text}</p>
       </div>
     </div>
   );

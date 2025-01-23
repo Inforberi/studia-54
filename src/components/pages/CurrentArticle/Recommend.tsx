@@ -12,7 +12,7 @@ const Recommend = () => {
           {arr.map((article, index) => (
             <div key={index} className="min-w-0 flex-[0_0_580px] snap-start">
               <PreviewArticle
-                href="some"
+                documentID="/"
                 src={"/main-screen/testnews.jpg"}
                 title="The Importance of Sustainable Design in Architectural Projects"
                 text="In recent years, sustainable design has become a cornerstone of architectural project planning. Sustainable design focuses on creating buildings that minimize environmental impact and promote energy efficiency."

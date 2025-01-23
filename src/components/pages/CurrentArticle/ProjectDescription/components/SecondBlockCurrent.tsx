@@ -4,7 +4,7 @@ import Image from "next/image";
 const SecondBlockCurrent = () => {
   return (
     <div className="grid grid-cols-[auto,_auto] gap-28 text-white">
-      <div className="border-divider max-w-[650px] border-b-[1px]">
+      <div className="max-w-[650px] border-b-[1px] border-divider">
         <div className="relative mb-10 aspect-[4/3]">
           <Image
             src="/main-screen/testnews.jpg"
@@ -13,7 +13,7 @@ const SecondBlockCurrent = () => {
             className="object-cover"
           />
         </div>
-        <p className="mb-10">
+        <p className="text-text mb-10">
           The architectural project of a 1,093 m² development in the Knyazhe
           Ozero cottage community in the Moscow region was an ambitious task for
           the Studia 54 team. The owner wished to create a complex of houses in
@@ -32,7 +32,7 @@ const SecondBlockCurrent = () => {
             className="object-cover"
           />
         </div>
-        <p>
+        <p className="text-text">
           The architectural project of a 1,093 m² development in the Knyazhe
           Ozero cottage community in the Moscow region was an ambitious task for
           the Studia 54 team. The owner wished to create a complex of houses in

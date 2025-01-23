@@ -6,19 +6,19 @@ import Tags from "./Components/Tags";
 import News from "./Components/News";
 
 // types
-import type { Articles, SearchParams } from "@/types/types";
+import type { Articles } from "@/types/types";
 
 // data
 import { GET_ARTICLES } from "@/lib/queries/strapiData";
 import client from "@/lib/graphql-client";
 
-const Articles = async ({ SearchParams }: SearchParams) => {
+const Articles = async () => {
   const data: Articles = await client.request(GET_ARTICLES, {
     sort: ["publishedAt:desc"],
     filters: {
       tags: {
         system_title: {
-          contains: SearchParams || "",
+          contains: "",
         },
       },
     },
@@ -30,7 +30,10 @@ const Articles = async ({ SearchParams }: SearchParams) => {
   return (
     <section
       id="articles"
-      className={cn("-mt-[1px] overflow-hidden bg-black pb-52 text-white")}
+      className={cn(
+        "-mt-[1px] overflow-hidden bg-black pb-[70px] text-white",
+        "sm:pb-52",
+      )}
     >
       <Tags tags={tags} />
       <News articles={articles} />

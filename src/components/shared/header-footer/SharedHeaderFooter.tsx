@@ -27,7 +27,7 @@ const SharedHeaderFooter = ({ as }: SharedHeaderFooterProps) => {
         as === "header" ? "text-black" : "text-white",
       )}
     >
-      <div className={cn("flex items-end gap-x-4")}>
+      <div className={cn("flex flex-wrap items-end gap-x-4")}>
         <Link className={cn("text-4xl")} href="/">
           architecture
         </Link>

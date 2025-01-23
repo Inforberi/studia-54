@@ -15,7 +15,10 @@ const News = ({ articles }: NewsProps) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-x-[30px] gap-y-[70px] px-[60px]",
+        "grid grid-cols-1 gap-x-[30px] gap-y-[60px] px-5",
+        "sm:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]",
+        "lg:gap-y-[70px] lg:px-10",
+        "xl:px-[60px]",
         "2xl:grid-cols-3",
       )}
     >

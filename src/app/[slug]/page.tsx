@@ -8,9 +8,6 @@ import Recommend from "@/components/pages/CurrentArticle/Recommend";
 import { GET_ARTICLE } from "@/lib/queries/strapiData";
 import client from "@/lib/graphql-client";
 
-// types
-import type { Article } from "@/types/types";
-
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const ArticlePage = async ({
@@ -20,7 +17,7 @@ const ArticlePage = async ({
 }) => {
   const { slug } = await params;
 
-  const data: Article = await client.request(GET_ARTICLE, {
+  const data: any = await client.request(GET_ARTICLE, {
     documentId: slug,
   });
 

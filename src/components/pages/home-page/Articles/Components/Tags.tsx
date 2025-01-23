@@ -28,34 +28,37 @@ const Tags = ({ tags }: TagsProps) => {
         "xl:mb-[70px] xl:px-[60px] xl:py-12",
       )}
     >
-      <div className="overflow-hidden">
-        <div className={cn("flex items-center overflow-x-auto")}>
-          {tags.map((tag, index) => (
-            <div key={index} className="flex items-center p-px">
-              <button
-                onClick={() => {
-                  handleTagClick(tag);
-                }}
-                className={cn(
-                  "block whitespace-nowrap px-7 py-4 text-sm transition-[outline] duration-300",
-                  "xl:px-12 xl:py-6 xl:text-lg",
-                  currentTeg === tag &&
-                    "rounded-full outline outline-1 outline-white hover:outline-hover active:ring-white",
-                )}
-              >
-                {tag}
-              </button>
-              {index < tags.length - 1 && (
-                <div
-                  className={cn(
-                    "inline-block w-px bg-[#5b5c5d]",
-                    "xl:mx-5 xl:h-9",
-                  )}
-                ></div>
+      <div
+        className={cn(
+          "flex max-w-full flex-wrap items-center justify-center overflow-x-auto",
+          "sm:justify-start",
+        )}
+      >
+        {tags.map((tag, index) => (
+          <div key={index} className="flex min-w-min items-center p-px">
+            <button
+              onClick={() => {
+                handleTagClick(tag);
+              }}
+              className={cn(
+                "block whitespace-nowrap px-7 py-4 text-sm transition-[outline] duration-300",
+                "xl:px-12 xl:py-6 xl:text-lg",
+                currentTeg === tag &&
+                  "rounded-full outline outline-1 outline-white hover:outline-hover active:ring-white",
               )}
-            </div>
-          ))}
-        </div>
+            >
+              {tag}
+            </button>
+            {index < tags.length - 1 && (
+              <div
+                className={cn(
+                  "inline-block w-px bg-[#5b5c5d]",
+                  "xl:mx-5 xl:h-9",
+                )}
+              ></div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

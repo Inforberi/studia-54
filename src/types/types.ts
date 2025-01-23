@@ -102,4 +102,7 @@ export interface Article {
   };
 }
 
-export type SearchParams = { [key: string]: string | string[] | undefined };
+// export type SearchParams = { [key: string]: string | string[] | undefined };
+export type SearchParams = Promise<{
+  [key: string]: string | string[] | undefined;
+}>;
